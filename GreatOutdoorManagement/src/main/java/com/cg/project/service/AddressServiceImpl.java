@@ -15,8 +15,9 @@ public class AddressServiceImpl implements AddressService{
 	@Override
 	public List<Address> findAllAddress() throws AddressException {
 	return addressdao.findAll();
-	//Looks good
-	}
+	//return false
+  }
+
 
 	@Override
 	public Address findAllAddressId(int addressId) throws AddressException {
