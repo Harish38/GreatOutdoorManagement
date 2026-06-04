@@ -1,18 +1,12 @@
 package com.cg.project.service;
 
-import java.util.List;
-
+import com.cg.project.dao.AddressDao;
+import com.cg.project.entity.Address;
+import com.cg.project.exception.AddressException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
-import com.cg.project.dao.AddressDao;
-import com.cg.project.dao.CustomerDao;
-import com.cg.project.entity.Address;
-import com.cg.project.entity.Customer;
-import com.cg.project.exception.AddressException;
-
-import net.bytebuddy.dynamic.DynamicType.Builder.FieldDefinition.Optional;
+import java.util.List;
 @Service
 public class AddressServiceImpl implements AddressService{
 
@@ -22,7 +16,8 @@ public class AddressServiceImpl implements AddressService{
 	public List<Address> findAllAddress() throws AddressException {
 	return addressdao.findAll();
 	//return false
-	}
+  }
+
 
 	@Override
 	public Address findAllAddressId(int addressId) throws AddressException {
